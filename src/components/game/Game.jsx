@@ -15,12 +15,19 @@ export default function Game({result,playerScore, computerScore,gameOver,onReset
             </div>
             <div className="game-score">{playerScore}</div>  
         </div>
-        
-        {gameOver && <div className='game-over'>
+
+        <div className={`game-over ${gameOver ? 'game-over-active' : ''}`}>
+                <p>Game Over!</p>
+                <p>{playerScore === 5 ? 'You win!!🏆' : 'Computer wins!'}</p>
+                <button onClick={onResetGame}>Play again</button>   
+            </div>
+
+       
+        {/* {gameOver && <div className='game-over'>
                             <p>Game Over!</p>
                             <p>{playerScore === 5 ? 'You win!!🏆' : 'Computer wins!'}</p>
                             <button onClick={onResetGame}>Play again</button>
-                    </div>}
+                    </div>} */}
         
        
         </>

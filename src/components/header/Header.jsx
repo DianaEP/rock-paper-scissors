@@ -5,7 +5,11 @@ export default function Header(){
         <>
          <div className="header-container">
             <h1>Rock Paper Scissors</h1>
-            <p>Players deliver hand signals representing rock, paper, or scissors, with the outcome determined by these three rules: Rock wins against scissors, Scissors win against paper, Paper wins against rock.</p>
+            <ul>Players deliver hand signals representing rock, paper, or scissors, with the outcome determined by these three rules:
+                <li>Rock wins against scissors</li> 
+                <li>Scissors win against paper</li> 
+                <li>Paper wins against rock</li>
+            </ul>
          </div>
         </>
     )
