@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Computer from '../computer/Computer';
 import Player from '../player/Player';
 import './Board.css';
@@ -36,8 +36,18 @@ export default function Board(){
     const [result, setResult] = useState('');
     const [playerScore, setPlayerScore] = useState(0);
     const [computerScore, setComputerScore] = useState(0);
+    const [gameOver, setGameOver] = useState(false);
+
+
+    useEffect(()=>{
+        if(playerScore === 5 || computerScore === 5){
+            setGameOver(true);
+        }
+    },[playerScore,computerScore])
 
     function handleChoice(choice){
+        if(gameOver) return;
+
         setPlayerChoice(choice);
         setIsComputing(true);
         setResult('');
@@ -52,13 +62,20 @@ export default function Board(){
             setPlayerScore(prevScore => prevScore + roundResult.playerScore);
             setComputerScore(prevScore => prevScore + roundResult.computerScore);
             
-        },500)
-
-        
-
-       
+        },500)  
     }
 
+    function resetGame(){
+        setComputerChoice(data[0]);
+        setPlayerChoice(data[0]);
+        setIsComputing(false);
+        setResult('');
+        setPlayerScore(0);
+        setComputerScore(0);
+        setGameOver(false);
+    }
+
+        
 
 
 
@@ -66,7 +83,7 @@ export default function Board(){
         <>
          <div className="board-container">
             <Computer choice={computerChoice} isComputing={isComputing}/>
-            <Game result={result} playerScore={playerScore} computerScore={computerScore}/>
+            <Game result={result} playerScore={playerScore} computerScore={computerScore} gameOver={gameOver} onResetGame={resetGame}/>
             <Player choice={playerChoice} onSelect={handleChoice}/>
          </div>
          
