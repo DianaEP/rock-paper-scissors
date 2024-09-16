@@ -40,3 +40,31 @@ body{
   font-size: 1.5rem;
   font-weight: 600;
 }
+
+@media (max-width: 1200px) {
+  .common-container{
+    height: 70%;  
+  } 
+}
+
+@media (max-width: 970px) {
+  .common-container{
+    height: 60%;  
+  } 
+
+  .common-container span{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .common-container span{
+    font-size: 1rem;
+  }
+
+  .common-container img{
+    width: 70px;
+    height: 60px;
+  }
+  
+}

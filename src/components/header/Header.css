@@ -11,3 +11,24 @@
     list-style-type: none;
 }
 
+@media (max-width: 970px) {
+    .header-container{
+        font-size: 0.9rem;
+    }
+    
+}
+
+@media (max-width: 750px) {
+    .header-container{
+        font-size: 0.7rem;
+    }
+    
+}
+
+
+@media (max-width: 600px) {
+    .header-container ul{
+        display: none;
+    }
+    
+}

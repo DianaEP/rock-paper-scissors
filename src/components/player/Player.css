@@ -23,3 +23,25 @@
     color: var(--color1);          
     transform: scale(1.05);         
 }
+
+@media (max-width: 1200px) {
+    .player-buttons{
+       flex-direction: column;
+       row-gap: 1rem;
+    }
+
+    
+}
+
+@media (max-width: 970px) {
+    .player-buttons{
+       flex-direction: column;
+       row-gap: 1rem;
+    }
+
+    .player-buttons button{
+        font-size: 0.9rem;
+    }
+
+    
+}

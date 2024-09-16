@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 
 export default function Game({result,playerScore, computerScore,gameOver,onResetGame}){
 
-    
-
-
     return(
         <>
         <div className="game-container">
@@ -20,7 +17,7 @@ export default function Game({result,playerScore, computerScore,gameOver,onReset
                 <p>Game Over!</p>
                 <p>{playerScore === 5 ? 'You win!!🏆' : 'Computer wins!'}</p>
                 <button onClick={onResetGame}>Play again</button>   
-            </div>
+        </div>
 
        
         {/* {gameOver && <div className='game-over'>

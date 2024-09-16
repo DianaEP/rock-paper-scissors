@@ -3,7 +3,6 @@ import {data} from '../../data';
 import PropTypes from 'prop-types';
 
 export default function Player({choice, onSelect}){
-   
     
     return(
         <>

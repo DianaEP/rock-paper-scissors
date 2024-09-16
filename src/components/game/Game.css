@@ -88,3 +88,93 @@
     box-shadow: 0px 0px 5px 0px var(--color2);
     color: var(--color3);   
 }
+
+
+@media (max-width: 970px) {
+    .game-score{
+        height: 25%;
+        font-size: 1.4rem;
+        padding-top: 0.8rem;
+        
+    
+    }
+    
+}
+
+@media (max-width: 850px) {
+    .game-container{
+        height: 200px;
+        width: 300px;
+    }
+    .game-score{
+        width: 40%;
+        height: 20%;
+        font-size: 1rem;
+        padding-top: 0.7rem;
+        font-weight: 600;
+    }
+
+    .result p{
+        font-size: 0.9rem;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .game-container{
+        column-gap: 0.2rem;
+        height: 150px;
+        width: 150px;
+    }
+    .game-score{
+        width: 40%;
+        height: 20%;
+        padding-top: 0.4rem;
+    }
+
+    .result p{
+        font-size: 0.8rem;
+    }
+    
+}
+
+
+
+/* game-over */
+
+@media (max-width: 970px) {
+    .game-over p:first-child{
+        font-size: 2.5rem;
+    }
+
+    .game-over p:nth-child(2){
+        font-size: 1.5rem;
+    }
+
+    .game-over button{
+        font-size: 0.9rem;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .game-over{
+        top: 20%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+
+    .game-over p:first-child{
+        font-size: 1.5rem;
+    }
+
+    .game-over p:nth-child(2){
+        font-size: 1rem;
+    }
+
+    .game-over button{
+        font-size: 0.8rem;
+    }
+}
+
