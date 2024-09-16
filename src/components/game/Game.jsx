@@ -1,3 +1,4 @@
+import GameOver from '../game-over/GameOver';
 import './Game.css';
 import PropTypes from 'prop-types';
 
@@ -13,11 +14,7 @@ export default function Game({result,playerScore, computerScore,gameOver,onReset
                 <div className="game-score">{playerScore}</div>  
             </div>
 
-            <div className={`game-over ${gameOver ? 'game-over-active' : ''}`}>
-                <p>Game Over!</p>
-                <p>{playerScore === 5 ? 'You win!!🏆' : 'Computer wins!'}</p>
-                <button onClick={onResetGame}>Play again</button>   
-            </div>
+            <GameOver playerScore={playerScore} gameOver={gameOver} onResetGame={onResetGame}/>
         </>
     )
 }
