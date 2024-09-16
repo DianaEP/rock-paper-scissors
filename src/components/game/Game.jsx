@@ -5,28 +5,19 @@ export default function Game({result,playerScore, computerScore,gameOver,onReset
 
     return(
         <>
-        <div className="game-container">
-            <div className="game-score">{computerScore}</div>
-            <div className='result'>
-                {result && <p>{result}</p>}
+            <div className="game-container">
+                <div className="game-score">{computerScore}</div>
+                <div className='result'>
+                    {result && <p>{result}</p>}
+                </div>
+                <div className="game-score">{playerScore}</div>  
             </div>
-            <div className="game-score">{playerScore}</div>  
-        </div>
 
-        <div className={`game-over ${gameOver ? 'game-over-active' : ''}`}>
+            <div className={`game-over ${gameOver ? 'game-over-active' : ''}`}>
                 <p>Game Over!</p>
                 <p>{playerScore === 5 ? 'You win!!🏆' : 'Computer wins!'}</p>
                 <button onClick={onResetGame}>Play again</button>   
-        </div>
-
-       
-        {/* {gameOver && <div className='game-over'>
-                            <p>Game Over!</p>
-                            <p>{playerScore === 5 ? 'You win!!🏆' : 'Computer wins!'}</p>
-                            <button onClick={onResetGame}>Play again</button>
-                    </div>} */}
-        
-       
+            </div>
         </>
     )
 }
@@ -37,6 +28,4 @@ Game.propTypes = {
     computerScore: PropTypes.any,
     gameOver: PropTypes.any,
     onResetGame: PropTypes.any,
-
-    
-  }
+}

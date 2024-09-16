@@ -75,20 +75,11 @@ export default function Board(){
         setGameOver(false);
     }
 
-        
-
-
-
     return(
-        <>
          <div className="board-container">
             <Computer choice={computerChoice} isComputing={isComputing}/>
             <Game result={result} playerScore={playerScore} computerScore={computerScore} gameOver={gameOver} onResetGame={resetGame}/>
             <Player choice={playerChoice} onSelect={handleChoice}/>
-         </div>
-         
-         
-
-        </>
+        </div>    
     )
 }

@@ -1,4 +1,3 @@
-import './App.css'
 import Board from './components/board/Board'
 import Header from './components/header/Header'
 

@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import './Computer.css';
 import { data } from '../../data';
 import { useEffect, useState } from 'react';
 
@@ -20,16 +19,12 @@ export default function Computer({choice,isComputing}){
    },[isComputing,choice])
 
     return(
-        <>
         <div className="computer-container">
             <div className="common-container">
                 <span>{currentChoice.name}</span>
                 <img src={currentChoice.image} alt={currentChoice.name} />
             </div>
         </div>
-            
-         
-        </>
     )
 }
 
